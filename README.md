@@ -1,23 +1,33 @@
 # 99 Bottles
 
-## Installing Ruby
+## Setup
+### Bundler / Bundle
+`bundle`
 
-### Windows
+If that doesn't work, try:
+`gem install bundler`
+then
+`bundle`
 
-There's an installer, it's easy.
-http://rubyinstaller.org/
+### To Run Tests
+`ruby test/bottles_test.rb`
 
-### Mac
+### To Run Tests Continually
+`fswatch -0 -e ".*" -i ".rb" . | xargs -0 -n 1 -I {} ruby test/bottles_test.rb`
 
-Newer macs ship with a usable version of Ruby.
+_Note: You may need to_ `brew install fswatch`
 
-Try `ruby -v` in a terminal window, and if it's 1.9.x or 2.x you're fine.
+## Exercise
+As individuals or pairs, spend 30 minutes making the tests pass. After 30 minutes, we can compare solutions and discuss.
 
-http://www.railstutorial.org/book/beginning#sec-install_ruby
-http://tutorials.jumpstartlab.com/topics/environment/environment.html
-http://docs.railsbridge.org/installfest/macintosh
+### Discussion
+#### General Programming:
+1. How difficult was it to write?
+2. How hard is it to understand?
+3. How expensive will it be to change?
 
-### Linux
-
-Ubuntu: http://docs.railsbridge.org/installfest/linux
-https://www.ruby-lang.org/en/installation/
+#### Domain:
+1. How many verse variants are there?
+2. Which verses are most alike? In what way?
+3. Which verses are most different? In what way?
+4. What is the rule to determine which verse comes next?
